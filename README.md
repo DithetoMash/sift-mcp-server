@@ -9,7 +9,7 @@ Connects an AI agent to SANS SIFT forensic tools through a custom Model Context 
 The agent autonomously triages a disk image, cross-references findings across sources, labels each finding as CONFIRMED / INFERRED / UNVERIFIED, and self-corrects when it finds inconsistencies.
 
 ## Architecture
-
+![Architecture](sift_mcp_architecture.png)
 
 
 ## Requirements
