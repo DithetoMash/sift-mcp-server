@@ -9,20 +9,7 @@ Connects an AI agent to SANS SIFT forensic tools through a custom Model Context 
 The agent autonomously triages a disk image, cross-references findings across sources, labels each finding as CONFIRMED / INFERRED / UNVERIFIED, and self-corrects when it finds inconsistencies.
 
 ## Architecture
-Disk Image (EWF/E01)
-↓
-Custom MCP Server (server.py)
-├── get_mft_timeline()       [read-only]
-├── get_registry_hives()     [read-only]
-├── get_user_profiles()      [read-only]
-└── get_ewf_info()           [read-only]
-↓
-Self-Correcting Agent (agent.py)
-→ Iterates up to 10 times
-→ Labels findings: CONFIRMED / INFERRED / UNVERIFIED
-→ Saves structured execution log
-↓
-Triage Report + Execution Logs (./logs/)
+![Architecture](sift_mcp_architecture.png)
 
 
 ## Requirements
